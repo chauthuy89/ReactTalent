@@ -30,8 +30,8 @@ namespace ReactTalent
                 configuration.RootPath = "ClientApp/build";
             });
 
-            services.AddDbContext<ReactTalentContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ReactTalentContext")));
+            services.AddDbContext<ProjectTalentContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ProjectTalentContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

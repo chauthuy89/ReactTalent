@@ -10,14 +10,15 @@ using ReactTalent.Models;
 namespace ReactTalent.Controllers
 {
 
-    [Route("api/Customer")]
+    [Route("api/[controller]")]
     public class CustomerController : Controller
     {
        
         DataAccess obCustomer = new DataAccess();
+        
         // GET: api/<controller>
-        [HttpGet]
-        [Route("api/Customer/Index")]
+        [HttpGet("[action]")]
+        [Route("Index")]
         public IEnumerable<Customer> Index()
         {
             return obCustomer.GetAllCustomers();
