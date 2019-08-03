@@ -9,9 +9,11 @@ using ReactTalent.Models;
 
 namespace ReactTalent.Controllers
 {
+
     [Route("api/Customer")]
     public class CustomerController : Controller
     {
+       
         DataAccess obCustomer = new DataAccess();
         // GET: api/<controller>
         [HttpGet]

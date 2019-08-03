@@ -25,7 +25,9 @@ export class Counter extends Component {
         <p>Current count: <strong>{this.state.currentCount}</strong></p>
 
         <button onClick={this.incrementCounter}>Increment</button>
-      </div>
+        </div>
+       
+
     );
   }
 }

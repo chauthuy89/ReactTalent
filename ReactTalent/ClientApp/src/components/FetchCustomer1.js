@@ -1,24 +1,19 @@
-﻿import React from 'react';
-
+﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 
 export class FetchCustomer1 extends React.Component {
-    displayName = FetchCustomer.name
+    displayName = FetchCustomer1.name
     constructor(props) {
         super(props);
 
         this.state = { custList: [], loading: true };
-
         fetch('api/Customer/Index')
-
-            .then(response => response.json() )
-
+            .then(response => response.json())
             .then(data => {
-
                 this.setState({ custList: data, loading: false });
-
             });
+
         // This binding is necessary to make "this" work in the callback  
 
         this.handleDelete = this.handleDelete.bind(this);
@@ -29,7 +24,7 @@ export class FetchCustomer1 extends React.Component {
 
         let contents = this.state.loading
 
-            ? <p><em>Loading...</em></p>
+            ? <p><em>Loading...!!!!</em></p>
 
             : this.renderCustomerTable(this.state.custList);
 
@@ -57,7 +52,7 @@ export class FetchCustomer1 extends React.Component {
 
  handleDelete(id) {
 
-        if (!confirm("Do you want to delete customer with Id: " + id))
+     if (!Window.confirm("Do you want to delete customer with Id: " + id))
 
             return;
 
@@ -121,7 +116,7 @@ export class FetchCustomer1 extends React.Component {
 
             <tbody>
 
-                {cusList.map(cust =>
+                {custList.map(cust =>
 
                     <tr key={cust.customerId}>
 
@@ -156,12 +151,3 @@ export class FetchCustomer1 extends React.Component {
 
 
 
-export class CustomerData {
-
-    customerId = 0;
-
-    name= "";
-
-    address = "";
-
-}

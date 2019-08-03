@@ -4,11 +4,7 @@ using System.Collections.Generic;
 namespace ReactTalent.Models
 {
     public partial class Customer
-    {
-        public Customer()
-        {
-            Sale = new HashSet<Sale>();
-        }
+    {     
 
         public int CustomerId { get; set; }
         public string Name { get; set; }

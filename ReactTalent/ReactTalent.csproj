@@ -32,8 +32,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\components\AddCustomer.js" />
+    <None Remove="ClientApp\src\components\CustomerTest.tsx" />
     <None Remove="ClientApp\src\components\FetchCustomer.tsx" />
-    <None Remove="ClientApp\src\components\FetchCustomer2.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\AddCustomer.js" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
