@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ReactTalent.Models
 {
     public partial class Sale
     {
+        [Key]
         public int SaleId { get; set; }
+        
         public DateTime DateSold { get; set; }
         public int? CustomerId { get; set; }
         public int? ProductId { get; set; }

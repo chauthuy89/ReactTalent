@@ -15,17 +15,14 @@ namespace ReactTalent.Controllers
     {
        
         DataAccess obCustomer = new DataAccess();
-        
+        //Customer 
         // GET: api/<controller>
         [HttpGet("[action]")]
         [Route("Index")]
-        public IEnumerable<Customer> Index()
-        {
-            return obCustomer.GetAllCustomers();
-        }
+        public IEnumerable<Customer> Index() => obCustomer.GetAllCustomers();
         [HttpPost]
 
-        [Route("api/Customer/Create")]
+        [Route("Create")]
 
         public int Create(Customer customer)
 
@@ -39,7 +36,7 @@ namespace ReactTalent.Controllers
 
         [HttpGet]
 
-        [Route("api/Customer/Details/{id}")]
+        [Route("Details/{id}")]
 
         public Customer Details(int id)
 
@@ -53,7 +50,7 @@ namespace ReactTalent.Controllers
 
         [HttpPut]
 
-        [Route("api/Customer/Edit")]
+        [Route("/Edit")]
 
         public int Edit(Customer customer)
 
@@ -67,7 +64,7 @@ namespace ReactTalent.Controllers
 
         [HttpDelete]
 
-        [Route("api/Customer/Delete/{id}")]
+        [Route("Delete/{id}")]
 
         public int Delete(int id)
 
@@ -81,7 +78,7 @@ namespace ReactTalent.Controllers
 
         [HttpGet]
 
-        [Route("api/Customer/GetProductList")]
+        [Route("GetProductList")]
 
         public IEnumerable<Product> Details()
 
@@ -92,7 +89,7 @@ namespace ReactTalent.Controllers
         }
         [HttpGet]
 
-        [Route("api/Customer/GetStoreList")]
+        [Route("GetStoreList")]
 
         public IEnumerable<Store> StoreDetails()
 
@@ -103,7 +100,7 @@ namespace ReactTalent.Controllers
         }
         [HttpGet]
 
-        [Route("api/Customer/GetSaleList")]
+        [Route("GetSaleList")]
 
         public IEnumerable<Sale> SaleDetails()
 
@@ -112,5 +109,6 @@ namespace ReactTalent.Controllers
             return obCustomer.GetSales();
 
         }
+
     }
 }

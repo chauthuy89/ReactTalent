@@ -33,7 +33,6 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\components\AddCustomer.js" />
-    <None Remove="ClientApp\src\components\CustomerTest.tsx" />
     <None Remove="ClientApp\src\components\FetchCustomer.tsx" />
   </ItemGroup>
 
